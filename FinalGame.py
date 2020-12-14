@@ -44,9 +44,12 @@ class Game:
         else:
             print("The Computer Won")
             self.winner.config(text="The Computer is the Winner")
-
-
-
+window = tk.Tk()
+window.geometry('400x400')
+window.title('Rock,Paper,Scissors')
+window.configure(background='blue')
+b = Game(window)
+window.mainloop()
 
 
 
