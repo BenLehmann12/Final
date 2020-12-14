@@ -13,7 +13,10 @@ computer = ""
 
 def choices(choice):   #Take user written input
     decisions = {"rock":0,"paper":1,"scissors":2}
-    return decisions[choice]
+        try:
+        return decisions[choice]
+    except:
+        return "Choice is invalid"
 
 def computer():
     comp = random.choice(["rock","paper","scissors"])
