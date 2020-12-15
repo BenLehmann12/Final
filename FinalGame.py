@@ -20,13 +20,13 @@ class Game:
         self.winner.pack()
 
         self.options = [('rock', 0), ('paper', 1), ('scissors', 2)]  #Create a list, with tuples, each with a score, rock is 0, paper is 1, scissors is 2
-        self.rock = tk.Button(new_frame, text='Rock', command=lambda: self.test(self.options[0]))
+        self.rock = tk.Button(new_frame, text='Rock', command=lambda: self.test(self.options[0]))  #Rock will be the first option
         self.rock.grid(row=1, column=1)
 
-        self.paper = tk.Button(new_frame, text='Paper', command=lambda: self.test(self.options[1]))
+        self.paper = tk.Button(new_frame, text='Paper', command=lambda: self.test(self.options[1]))  #Paper is the 2nd option
         self.paper.grid(row=1, column=2)
 
-        self.scissors = tk.Button(new_frame, text='Scissors', command=lambda: self.test(self.options[2]))
+        self.scissors = tk.Button(new_frame, text='Scissors', command=lambda: self.test(self.options[2]))   #Scissors is the 3rd option
         self.scissors.grid(row=1, column=3)
 
         self.user_display = tk.Label(new_frame, text="You Selected ")
@@ -37,7 +37,7 @@ class Game:
 
     def computer_selection(self):
         self.computer_choice = random.choice(self.options)
-        try:
+        try:  #We will try, if the value is between 0-2 we will return value
             return self.computer_choice
         except:
             return "Error"
@@ -49,7 +49,7 @@ class Game:
         if (input == computer_select):
             self.winner.config(text="It's a Tie")
             print("Tie")
-        elif ((input[1] - computer_select[1]) % 3 == 1):
+        elif ((input[1] - computer_select[1]) % 3 == 1):   #Modulo 3 being the 3 options and has to be 1, and we will take the first option
             print("You Won")
             self.winner.config(text="You are the winner")
         else:
