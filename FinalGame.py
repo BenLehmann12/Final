@@ -1,6 +1,17 @@
 import tkinter as tk
 import random
 
+'''
+Author: Ben Lehmann
+Project: Rock Paper Scissors
+- We have multiple methods
+    - computer_selection(self): this will return a random value, from the list of rock, paper, scissors
+    - def test(self,input): this will return whether you have beaten the computer or have tied, we will take the input button being the input
+
+Date Modified: 12/02/20 -- 12/14/20 (Modifications with buttons and making sure it can reset or can keep running)
+
+'''
+
 class Game:
     def __init__(self,Master):
         new_frame = tk.Frame(Master)
